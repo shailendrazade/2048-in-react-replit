@@ -1,10 +1,28 @@
-
 import Head from "next/head";
 import styles from "@/styles/pages.module.css";
 
+// New Layout component
+function Layout({ children }) {
+  return (
+    <div>
+      <header>
+        <h1>2048 Game</h1>  {/* Example header - replace with your actual header */}
+        <nav>
+          {/* Add navigation links here */}
+        </nav>
+      </header>
+      <main>{children}</main>
+      <footer>
+        <p>&copy; 2023 Your Company</p> {/* Example footer - replace with your actual footer */}
+      </footer>
+    </div>
+  );
+}
+
+
 export default function Privacy() {
   return (
-    <div className={styles.page}>
+    <Layout>
       <Head>
         <title>Privacy Policy - 2048 Game</title>
       </Head>
@@ -16,6 +34,6 @@ export default function Privacy() {
         <h2>Cookies</h2>
         <p>We use cookies solely for game functionality and to remember your highest score.</p>
       </div>
-    </div>
+    </Layout>
   );
 }

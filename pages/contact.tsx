@@ -1,7 +1,7 @@
-
 import Head from "next/head";
 import { useState } from "react";
 import styles from "@/styles/pages.module.css";
+import Layout from '@/components/layout';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -39,12 +39,12 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setTouched({ name: true, email: true, message: true });
-    
+
     if (!validateForm()) {
       setStatus('Please fix the errors before submitting.');
       return;
     }
-    
+
     setStatus('Sending...');
 
     try {
@@ -68,7 +68,7 @@ export default function Contact() {
   };
 
   return (
-    <div className={styles.page}>
+    <Layout>
       <Head>
         <title>Contact Us - 2048 Game</title>
         <script src="https://www.google.com/recaptcha/enterprise.js?render=YOUR_SITE_KEY"></script>
@@ -115,6 +115,6 @@ export default function Contact() {
           {status && <p className={styles.status}>{status}</p>}
         </form>
       </div>
-    </div>
+    </Layout>
   );
 }
