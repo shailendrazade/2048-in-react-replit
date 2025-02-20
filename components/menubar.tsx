@@ -6,20 +6,15 @@ import { useContext } from 'react';
 import { GameContext } from '@/context/game-context';
 
 export default function MenuBar() {
-  const gameContext = useContext(GameContext);
+  const { startGame, score } = useContext(GameContext);
   const [showHowTo, setShowHowTo] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-
-  const handleNewGame = () => {
-    setShowSettings(false);
-    gameContext.startGame();
-  };
 
   return (
     <>
       <nav className={styles.menubar}>
         <div className={styles.menuLeft}>
-          <button onClick={handleNewGame}>New Game</button>
+          <button onClick={startGame}>New Game</button>
         </div>
         <div className={styles.menuRight}>
           <button onClick={() => setShowHowTo(true)}>How to Play</button>
@@ -45,8 +40,8 @@ export default function MenuBar() {
 
       <Modal isOpen={showSettings} onClose={() => setShowSettings(false)} title="Settings">
         <div className={styles.settings}>
-          <button onClick={handleNewGame} className={styles.settingButton}>Reset Game</button>
-          <p className={styles.settingInfo}>Current Score: {gameContext.score}</p>
+          <button onClick={startGame} className={styles.settingButton}>Reset Game</button>
+          <p className={styles.settingInfo}>Current Score: {score}</p>
         </div>
       </Modal>
     </>
