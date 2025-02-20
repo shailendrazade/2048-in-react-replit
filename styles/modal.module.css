@@ -13,13 +13,14 @@
 }
 
 .modal {
-  background: var(--background);
+  background: var(--primary-background);
   padding: 1.5rem;
   border-radius: 8px;
   max-width: 500px;
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header {
