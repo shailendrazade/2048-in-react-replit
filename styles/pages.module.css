@@ -35,6 +35,23 @@
   margin-bottom: 0.5rem;
 }
 
+.required::after {
+  content: "*";
+  color: #ff0000;
+  margin-left: 4px;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.formGroup input.invalid,
+.formGroup textarea.invalid {
+  border-color: #ff0000;
+}
+
 .formGroup input,
 .formGroup textarea {
   width: 100%;
