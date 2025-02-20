@@ -7,20 +7,14 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/about',
-        destination: '/about/',
-        permanent: true,
-        statusCode: 301,
-      },
-      {
-        source: '/privacy',
-        destination: '/privacy/',
-        permanent: true,
-        statusCode: 301,
-      },
-      {
-        source: '/terms',
-        destination: '/terms/',
+        source: '/:path*',
+        has: [
+          {
+            type: 'page',
+            value: 'true',
+          },
+        ],
+        destination: '/:path*/',
         permanent: true,
         statusCode: 301,
       },
