@@ -19,20 +19,3 @@ export default function Terms() {
     </Layout>
   );
 }
-
-//components/layout.js
-import styles from "@/styles/layout.module.css";
-
-export default function Layout({ children }) {
-  return (
-    <div className={styles.layout}>
-      <header className={styles.header}>
-        <h1>2048 Game</h1> {/* Example header - customize as needed */}
-      </header>
-      <main>{children}</main>
-      <footer className={styles.footer}>
-        <p>&copy; 2023 Your Name</p> {/* Example footer - customize as needed */}
-      </footer>
-    </div>
-  );
-}
