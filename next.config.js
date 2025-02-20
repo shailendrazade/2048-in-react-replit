@@ -7,14 +7,20 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: '(?!.*/$)',
-          },
-        ],
-        destination: '/:path*/',
+        source: '/about',
+        destination: '/about/',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/privacy',
+        destination: '/privacy/',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/terms',
+        destination: '/terms/',
         permanent: true,
         statusCode: 301,
       },
