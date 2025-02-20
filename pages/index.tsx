@@ -46,7 +46,7 @@ export default function Home() {
           and learn how to create the 2048 game from scratch.
         </p>
       </div>
-      <footer>
+      <footer className={styles.footer}>
         <div className={styles.socials}>
           <a
             href="https://github.com/mateuszsokola/2048-in-react"
