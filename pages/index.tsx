@@ -2,11 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Board from "@/components/board";
 import Score from "@/components/score";
+import MenuBar from "@/components/menubar";
 import styles from "@/styles/index.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.twenty48}>
+    <div className={styles.container}>
       <Head>
         <title>Play 2048</title>
         <meta
@@ -23,9 +24,10 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="32x32" href="favicon32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="favicon16.png" />
       </Head>
-      <header>
+      <header className={styles.header}>
         <h1>2048</h1>
         <Score />
+        <MenuBar />
       </header>
       <main>
         <Board />
