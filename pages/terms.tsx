@@ -1,10 +1,10 @@
 import Head from "next/head";
 import styles from "@/styles/pages.module.css";
-import Layout from '@/components/layout'; // Added import for Layout component
+import Layout from '@/components/layout';
 
 export default function Terms() {
   return (
-    <Layout> {/* Wrapped Terms component with Layout */}
+    <Layout>
       <Head>
         <title>Terms of Use - 2048 Game</title>
       </Head>
@@ -16,13 +16,9 @@ export default function Terms() {
         <h2>Fair Use</h2>
         <p>This game is provided for personal entertainment. Commercial use or redistribution is not permitted without explicit permission.</p>
       </div>
-    </Layout> {/* Closed Layout component */}
+    </Layout>
   );
 }
-
-//Added minimal layout component
-//This needs to be in a file named layout.js inside the components folder.
-//This is a placeholder, adjust styling and content as needed.
 
 //components/layout.js
 import styles from "@/styles/layout.module.css";
