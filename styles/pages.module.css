@@ -1,0 +1,22 @@
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content {
+  background: var(--secondary-background);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.content h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
